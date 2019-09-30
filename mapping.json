@@ -1,0 +1,62 @@
+[
+	{
+		"index": "course",
+		"mapping": {
+			"mappings": {
+				"properties": {
+					"title": {
+						"type": "text",
+						"analyzer": "thai"
+					},
+					"tag": {
+						"type": "text",
+						"analyzer": "thai"
+					}
+				}
+			}
+		}
+	},
+	{
+		"index": "categories",
+		"mapping": {
+			"mappings": {
+				"properties": {
+					"title": {
+						"type": "text",
+						"analyzer": "thai"
+					}
+				}
+			}
+		}
+	},
+	{
+		"index": "simulation_test",
+		"mapping": {
+			"mappings": {
+				"properties": {
+					"title": {
+						"type": "text",
+						"analyzer": "thai"
+					}
+				}
+			}
+		}
+	},
+	{
+		"index": "users",
+		"mapping": {
+			"mappings": {
+				"properties": {
+					"name": {
+						"type": "text",
+						"analyzer": "thai"
+					},
+					"email": {
+						"type": "text",
+						"analyzer": "thai"
+					}
+				}
+			}
+		}
+	}
+]
