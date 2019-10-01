@@ -58,5 +58,22 @@
 				}
 			}
 		}
+	},
+	{
+		"index": "tutor",
+		"mapping": {
+			"mappings": {
+				"properties": {
+					"fullname": {
+						"type": "text",
+						"analyzer": "thai"
+					},
+					"name": {
+						"type": "text",
+						"analyzer": "thai"
+					}
+				}
+			}
+		}
 	}
 ]
