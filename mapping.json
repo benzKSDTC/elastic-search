@@ -2,15 +2,37 @@
 	{
 		"index": "course",
 		"mapping": {
+			"settings": {
+				"index": {
+					"analysis": {
+						"analyzer": {
+							"autocomplete_analyzer": {
+								"type": "custom",
+								"tokenizer": "thai",
+								"filter": ["asciifolding", "title_ngram", "lowercase"]
+							}
+						},
+						"filter": {
+							"title_ngram": {
+								"type": "edge_ngram",
+								"max_gram": 5,
+								"min_gram": 1
+							}
+						}
+					}
+				}
+			},
 			"mappings": {
 				"properties": {
 					"title": {
 						"type": "text",
-						"analyzer": "thai"
+						"analyzer": "autocomplete_analyzer",
+						"boost": 10
 					},
 					"tag": {
 						"type": "text",
-						"analyzer": "thai"
+						"analyzer": "autocomplete_analyzer",
+						"boost": 10
 					}
 				}
 			}
@@ -19,11 +41,32 @@
 	{
 		"index": "categories",
 		"mapping": {
+			"settings": {
+				"index": {
+					"analysis": {
+						"analyzer": {
+							"autocomplete_analyzer": {
+								"type": "custom",
+								"tokenizer": "thai",
+								"filter": ["asciifolding", "title_ngram", "lowercase"]
+							}
+						},
+						"filter": {
+							"title_ngram": {
+								"type": "edge_ngram",
+								"max_gram": 5,
+								"min_gram": 1
+							}
+						}
+					}
+				}
+			},
 			"mappings": {
 				"properties": {
 					"title": {
 						"type": "text",
-						"analyzer": "thai"
+						"analyzer": "autocomplete_analyzer",
+						"boost": 10
 					}
 				}
 			}
@@ -32,11 +75,32 @@
 	{
 		"index": "simulation_test",
 		"mapping": {
+			"settings": {
+				"index": {
+					"analysis": {
+						"analyzer": {
+							"autocomplete_analyzer": {
+								"type": "custom",
+								"tokenizer": "thai",
+								"filter": ["asciifolding", "title_ngram", "lowercase"]
+							}
+						},
+						"filter": {
+							"title_ngram": {
+								"type": "edge_ngram",
+								"max_gram": 5,
+								"min_gram": 1
+							}
+						}
+					}
+				}
+			},
 			"mappings": {
 				"properties": {
 					"title": {
 						"type": "text",
-						"analyzer": "thai"
+						"analyzer": "autocomplete_analyzer",
+						"boost": 10
 					}
 				}
 			}
@@ -45,15 +109,37 @@
 	{
 		"index": "users",
 		"mapping": {
+			"settings": {
+				"index": {
+					"analysis": {
+						"analyzer": {
+							"autocomplete_analyzer": {
+								"type": "custom",
+								"tokenizer": "thai",
+								"filter": ["asciifolding", "title_ngram", "lowercase"]
+							}
+						},
+						"filter": {
+							"title_ngram": {
+								"type": "edge_ngram",
+								"max_gram": 5,
+								"min_gram": 1
+							}
+						}
+					}
+				}
+			},
 			"mappings": {
 				"properties": {
 					"name": {
 						"type": "text",
-						"analyzer": "thai"
+						"analyzer": "autocomplete_analyzer",
+						"boost": 10
 					},
 					"email": {
 						"type": "text",
-						"analyzer": "thai"
+						"analyzer": "autocomplete_analyzer",
+						"boost": 10
 					}
 				}
 			}
@@ -62,15 +148,37 @@
 	{
 		"index": "tutor",
 		"mapping": {
+			"settings": {
+				"index": {
+					"analysis": {
+						"analyzer": {
+							"autocomplete_analyzer": {
+								"type": "custom",
+								"tokenizer": "thai",
+								"filter": ["asciifolding", "title_ngram", "lowercase"]
+							}
+						},
+						"filter": {
+							"title_ngram": {
+								"type": "edge_ngram",
+								"max_gram": 5,
+								"min_gram": 1
+							}
+						}
+					}
+				}
+			},
 			"mappings": {
 				"properties": {
 					"fullname": {
 						"type": "text",
-						"analyzer": "thai"
+						"analyzer": "autocomplete_analyzer",
+						"boost": 10
 					},
 					"name": {
 						"type": "text",
-						"analyzer": "thai"
+						"analyzer": "autocomplete_analyzer",
+						"boost": 10
 					}
 				}
 			}
