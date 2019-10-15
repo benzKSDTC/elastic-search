@@ -31,8 +31,7 @@
 					},
 					"tag": {
 						"type": "text",
-						"analyzer": "autocomplete_analyzer",
-						"boost": 10
+						"analyzer": "thai"
 					}
 				}
 			}
@@ -101,6 +100,10 @@
 						"type": "text",
 						"analyzer": "autocomplete_analyzer",
 						"boost": 10
+					},
+					"tag": {
+						"type": "text",
+						"analyzer": "thai"
 					}
 				}
 			}
