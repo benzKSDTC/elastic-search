@@ -186,5 +186,39 @@
 				}
 			}
 		}
+	},
+	{
+		"index": "bundle",
+		"mapping": {
+			"settings": {
+				"index": {
+					"analysis": {
+						"analyzer": {
+							"autocomplete_analyzer": {
+								"type": "custom",
+								"tokenizer": "thai",
+								"filter": ["asciifolding", "title_ngram", "lowercase"]
+							}
+						},
+						"filter": {
+							"title_ngram": {
+								"type": "edge_ngram",
+								"max_gram": 8,
+								"min_gram": 2
+							}
+						}
+					}
+				}
+			},
+			"mappings": {
+				"properties": {
+					"title": {
+						"type": "text",
+						"analyzer": "autocomplete_analyzer",
+						"boost": 10
+					}
+				}
+			}
+		}
 	}
 ]
