@@ -7,21 +7,22 @@ services:
       - http.port=9200
       - transport.port=9300
     ports:
-      - "9201:9201"
-      - "9301:9301"
+      - "9200:9200"
+      - "9300:9300"
   kibana:
     image: docker.elastic.co/kibana/kibana:7.3.2
     environment:
-      - ELASTICSEARCH_HOSTS=http://elasticsearch:9201
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
     ports:
-      - 5602:5601
+      - 5601:5601
   elasticsearch-mapping-init:
     build: .
     depends_on:
       - elasticsearch
       - kibana
     environment:
-      - ELASTICSEARCH_URL=elasticsearch:9201
+      - ELASTICSEARCH_ENVS=dev uat
+      - ELASTICSEARCH_URL=elasticsearch:9200
     volumes:
       - ./mapping.json:/mapping.json
     restart: on-failure

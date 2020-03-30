@@ -21,6 +21,7 @@ services:
       - elasticsearch
       - kibana
     environment:
+      - ELASTICSEARCH_ENVS=prod
       - ELASTICSEARCH_URL=elasticsearch:9200
     volumes:
       - ./mapping.json:/mapping.json

@@ -7,4 +7,4 @@ RUN apt-get update && \
 COPY mapping.json /
 COPY init-mappings.sh /
 
-ENTRYPOINT ["sh", "/init-mappings.sh"]
+ENTRYPOINT ["bash", "/init-mappings.sh"]
