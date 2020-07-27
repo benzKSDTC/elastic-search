@@ -27,11 +27,13 @@
           "title": {
             "type": "text",
             "analyzer": "autocomplete_analyzer",
-            "boost": 10
+            "boost": 10,
+            "fielddata": true
           },
           "tag": {
             "type": "text",
-            "analyzer": "thai"
+            "analyzer": "thai",
+            "fielddata": true
           }
         }
       }
@@ -65,7 +67,8 @@
           "title": {
             "type": "text",
             "analyzer": "autocomplete_analyzer",
-            "boost": 10
+            "boost": 10,
+            "fielddata": true
           }
         }
       }
@@ -99,11 +102,13 @@
           "title": {
             "type": "text",
             "analyzer": "autocomplete_analyzer",
-            "boost": 10
+            "boost": 10,
+            "fielddata": true
           },
           "tag": {
             "type": "text",
-            "analyzer": "thai"
+            "analyzer": "thai",
+            "fielddata": true
           }
         }
       }
@@ -142,11 +147,13 @@
           "name": {
             "type": "text",
             "analyzer": "autocomplete_analyzer",
-            "boost": 10
+            "boost": 10,
+            "fielddata": true
           },
           "email": {
             "type": "text",
-            "analyzer": "my_email_analyzer"
+            "analyzer": "my_email_analyzer",
+            "fielddata": true
           }
         }
       }
@@ -180,12 +187,14 @@
           "fullname": {
             "type": "text",
             "analyzer": "autocomplete_analyzer",
-            "boost": 10
+            "boost": 10,
+            "fielddata": true
           },
           "name": {
             "type": "text",
             "analyzer": "autocomplete_analyzer",
-            "boost": 10
+            "boost": 10,
+            "fielddata": true
           }
         }
       }
@@ -219,7 +228,8 @@
           "title": {
             "type": "text",
             "analyzer": "autocomplete_analyzer",
-            "boost": 10
+            "boost": 10,
+            "fielddata": true
           }
         }
       }
