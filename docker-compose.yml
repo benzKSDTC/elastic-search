@@ -4,9 +4,12 @@ services:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.3.2
     restart: always
     environment:
+      - cluster.name=docker-cluster
       - discovery.type=single-node
       - http.port=9200
       - transport.port=9300
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     ports:
       - "9200:9200"
       - "9300:9300"
